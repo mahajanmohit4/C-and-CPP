@@ -1,0 +1,74 @@
+#include <iostream>
+
+using namespace std;
+
+class base
+{
+    protected:
+    int a;
+    public:
+
+        void get()
+        {
+            cout<<"Enter the a :";
+            cin>>a;
+        }
+        void show()
+        {
+            cout<<" A : "<<a<<endl;
+        }
+
+};
+
+class base1 :public base
+{
+    protected:
+    int b;
+    public:
+        void sete()
+        {
+            cout<<"Enter the b : ";
+            cin>>b;
+        }
+
+        void display()
+        {
+
+
+            cout<<"b  : ";
+            cout<<b<<endl;
+        }
+};
+
+class base2: public base1
+{
+protected:
+    int c;
+public:
+
+    void accept()
+    {
+        get();
+        sete();
+
+    }
+    void add()
+    {
+        c=a+b;
+    }
+    void dena()
+    {
+        cout<<c<<endl;
+    }
+};
+
+
+int main()
+{
+    base2 b;
+    b.accept();
+    b.add();
+    b.dena();
+
+    return 0;
+}

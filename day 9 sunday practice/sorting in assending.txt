@@ -1,0 +1,39 @@
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int n[10];
+    int i,j,temp;
+
+    cout<<"Enter the number : ";
+
+    for(i=0;i<5;i++)
+    {
+        cin>>n[i];
+    }
+
+    for(i=5;i>0;i--)
+    {
+        for(j=0;j<i;j++)
+        {
+            if(n[i]<n[j])
+            {
+                temp=n[i];
+                n[i]=n[j];
+                n[j]=temp;
+            }
+        }
+    }
+
+    cout<<"The sorted array is : ";
+
+    for(i=0;i<5;i++)
+    {
+        cout<<n[i]<<endl;
+    }
+
+    return 0;
+}

@@ -1,0 +1,42 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,c,sum=0;
+
+    cout<<"  ";
+    cin>>a;
+    c=a;
+    int b[c];
+
+    for(int i=0;i<c;i++)
+    {
+        cin>>b[i];
+
+    }
+
+    for(int i=0;i<c;i++)
+    {
+
+        for(int j=0;j<c;j++)
+        {
+            if(b[i]<b[j])
+            {
+                int t;
+                t=b[i];
+                b[i]=b[j];
+                b[j]=t;
+            }
+        }
+    }
+for(int i=0;i<c;i++)
+    {
+        cout<<b[i]<<endl;
+
+    }
+
+
+    return 0;
+}

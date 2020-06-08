@@ -1,0 +1,57 @@
+
+//function overloading
+
+#include <iostream>
+
+using namespace std;
+
+class base
+{
+protected:
+ int a;
+
+public:
+
+    void get()
+    {
+        cout<<"Enter the a : ";
+        cin>>a;
+    }
+
+    void show()
+    {
+        cout<<"a : "<<a<<endl;
+    }
+
+};
+class drv: public base
+{
+    int b;
+
+public:
+    void sete()
+    {
+        cout<<" enter b : ";
+        cin>>b;
+    }
+
+    void show()
+    {
+        cout<<"b : "<<b;
+
+    }
+
+};
+int main()
+{
+    base b;
+    b.get();
+    b.show();
+
+    drv d1;
+
+    d1.sete();
+    d1.show();
+
+    return 0;
+}

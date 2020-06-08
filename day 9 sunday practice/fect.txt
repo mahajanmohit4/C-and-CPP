@@ -1,0 +1,101 @@
+/*#include <iostream>
+
+
+using namespace std;
+
+
+
+int main()
+{
+    int f=1,n,a;
+    cout<<"Enter the number : ";
+    cin>>n;
+a=n;
+if(n>1)
+{
+
+
+   for(int i=1;i<a;i++)
+    {
+
+
+        f=f*n;
+        n--;
+    }
+     cout<<f;
+}
+else
+{
+    cout<<"Wrong number ";
+
+}
+
+    return 0;
+}
+*/
+
+
+#include<iostream>
+
+using namespace std;
+ int f=1, n,a;
+class fect
+{
+
+
+public :
+
+    fect()
+    {
+
+    cout<<"E  n  : ";
+    cin>>n;
+      a=n;
+    }
+
+    friend void show(fect &);
+
+};
+void show(fect &e)
+{
+    {
+    for(int i=1;i<a;i++)
+    {
+        f=f*n;
+        n--;
+    }
+       cout<<f;
+
+    }
+
+}
+int main()
+{
+    fect fe;
+
+    show(fe);
+
+    return 0;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

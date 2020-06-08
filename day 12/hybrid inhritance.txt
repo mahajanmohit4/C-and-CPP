@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+
+class base
+{
+
+public:
+     int a;
+
+
+};
+
+class drv1:virtual public base
+{
+public:
+    int b;
+
+};
+
+class drv2:virtual public base
+{
+public:
+
+    int c;
+
+};
+
+class drv3 :virtual public drv1,public drv2
+{
+public:
+
+    int d;
+
+};
+
+int main()
+{
+    drv3 d;
+    d.a=10;
+    d.b=20;
+    d.c=30;
+    d.d=40;
+ cout<<d.d;
+    return 0;
+}

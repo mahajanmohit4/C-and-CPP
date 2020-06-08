@@ -1,0 +1,36 @@
+#include<iostream>
+
+using namespace std;
+
+class base
+{
+public:
+
+    base()
+    {
+        cout<<"In base class construtor : "<<endl;
+    }
+    ~base()
+    {
+        cout<<"In base class destrutor : "<<endl;
+    }
+};
+class base1: public base
+{
+public:
+   base1()
+    {
+        cout<<"In base1 class construtor : "<<endl;
+    }
+    ~base1()
+    {
+        cout<<"In base1 class destrutor : "<<endl;
+    }
+};
+int main()
+{
+    base1 b;
+
+    return 0;
+
+}

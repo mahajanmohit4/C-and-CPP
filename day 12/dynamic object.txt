@@ -1,0 +1,46 @@
+#include<iostream>
+
+using namespace std;
+
+class employee
+{
+    int id;
+    string name;
+    string selery;
+    int age;
+
+public:
+
+    void get()
+    {
+        cout<<"Enter the id : ";
+        cin>>id;
+        cout<<"Enter the age : ";
+        cin>>age;
+        cout<<"Enter the name : ";
+        cin>>name;
+        cout<<"Enter the selery : ";
+        cin>>selery;
+    }
+    void show()
+    {
+        cout<<"Id : "<<id<<endl;
+        cout<<"Age : "<<age<<endl;
+
+        cout<<"Name : "<<name<<endl;
+        cout<<"Selery : "<<selery<<endl;
+    }
+
+};
+
+int main()
+{
+    employee *p;
+
+    p=new employee();
+    p->get();
+    p->show();
+
+
+    return 0;
+}

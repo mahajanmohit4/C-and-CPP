@@ -1,0 +1,50 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+
+    int a;
+    int i,j,temp;
+
+    cout<<"Enter the how many number you want  : ";
+    cin>>a;
+
+     int n[a];
+
+    for(i=0;i<a;i++)
+    {
+        cin>>n[i];
+    }
+
+    for(i=a;i<0;i--)
+    {
+        for(j=1;j<i;j++)
+        {
+            if(n[i]>n[j])
+            {
+                temp=n[i];
+                n[i]=n[j];
+                n[j]=temp;
+            }
+        }
+    }
+
+    cout<<"The sorted in assending array is : "<<endl;
+
+    for(i=0;i<a;i++)
+    {
+        cout<<n[i]<<"\t";
+    }
+
+    cout<<"\n Sorted in desending array is : "<<endl;
+
+    for(i=a;i>0;i--)
+    {
+        cout<<n[i]<<"\t";
+    }
+
+
+    return 0;
+}

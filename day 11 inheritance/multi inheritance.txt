@@ -1,0 +1,86 @@
+#include <iostream>
+
+using namespace std;
+
+class num
+{
+    protected:
+    int a,b;
+    public:
+
+        void get()
+        {
+            cout<<"Enter the a and b :";
+            cin>>a>>b;
+        }
+        void show()
+        {
+            cout<<" A : "<<a<<"\nB : "<<b<<endl;
+        }
+
+};
+
+class AddNum :public num
+{
+    protected:
+    int c;
+    public:
+        void sete()
+        {
+            get();
+        }
+        void add()
+        {
+            c=a+b;
+        }
+        void display()
+        {
+            show();
+
+            cout<<" Addition  : ";
+            cout<<c<<endl;
+        }
+};
+
+class Diff : public AddNum
+
+{
+protected:
+    int d;
+public:
+    void lena()
+    {
+        get();
+
+
+    }
+    void sub()
+    {
+        d=a-b;
+    }
+    void dena()
+    {
+            cout<<"substraction : "<<d<<endl;
+    }
+
+
+};
+int main()
+{
+    Diff d;
+    d.lena();
+  d.sete();
+
+ // AddNum a;
+  // a.sete();
+
+
+        d.sub();
+        d.add();
+    //    a.add();
+
+        d.dena();
+        d.display();
+
+    return 0;
+}

@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+class pre
+{
+    int a;
+public:
+
+    pre()
+    {
+        a=0;
+    }
+    pre(int i)
+    {
+        a=i;
+    }
+    friend pre operator++(pre &,int);
+    void show();
+};
+ pre operator++(pre &p,int)
+{
+    pre temp;
+    temp.a=(p.a)++;
+    return temp;
+}
+void pre :: show()
+{
+    cout<<"a= "<<a;
+}
+int main()
+{
+    pre c(100);
+    pre c1;
+    c1=c++;
+    c.show();
+    c1.show();
+
+    return 0;
+}

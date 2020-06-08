@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+class base
+{
+    int a;
+public:
+    base(int i)
+    {
+        a=i;
+        cout<<" a : "<<a;
+    }
+
+};
+class drv: public base
+{
+    int b;
+
+public:
+    drv(int i):base(i)
+    {
+        b=i;
+        cout<<"  b : "<<b;
+    }
+};
+int main()
+{
+    drv d(9);
+
+    return 0;
+}
