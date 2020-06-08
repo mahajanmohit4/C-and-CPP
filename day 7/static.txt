@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+
+
+ class tushar
+ {
+     static int roll=1;
+
+ public:
+    void display()
+    {   roll++;
+        cout<<"The number is : ";
+        cout<<roll<<endl;
+    }
+
+ };
+ int tushar::roll;
+
+int main()
+{
+
+    for(int i=0;i<2;i++)
+    {
+        tushar t;
+        t.display();
+
+    }
+    for(int i=0;i<2;i++)
+    {
+        tushar t1;
+        t1.display();
+
+    }
+
+
+    return 0;
+}

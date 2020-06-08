@@ -1,0 +1,81 @@
+#include<iostream>
+
+using namespace std;
+int a,b;
+class box
+{
+    int l,b,h;
+    int l1,b1,h1;
+
+public:
+    void get1()
+    {
+        cout<<"Enter the L : ";
+        cin>>l;
+        cout<<"Enter the B ;  ";
+        cin>>b;
+        cout<<"Enter the H : ";
+        cin>>h;
+        cout<<endl;
+        a=l*b*h;
+       // cout<<"Area is : "<<a<<endl<<endl;
+    }
+    void get2()
+    {
+        cout<<"Enter the L : ";
+        cin>>l1;
+        cout<<"Enter the B ;  ";
+        cin>>b1;
+        cout<<"Enter the H : ";
+        cin>>h1;
+        cout<<endl;
+        b=l1*b1*h1;
+       // cout<<"Area is : "<<b<<endl<<endl;
+    }
+
+   void compare()
+   {
+       if(a>b)
+        {
+            cout<<"Box of Area 1 is greater ";
+        }
+        else
+        {
+
+            cout<<"Box of Area 2 is greater ";
+        }
+   }
+
+
+
+};
+
+int main()
+{
+
+
+    box b1;
+
+
+    b1.get1();
+
+
+     box b2;
+
+    b2.get2();
+
+
+    box b3;
+    b3.compare();
+
+
+
+
+
+
+
+
+
+
+    return 0;
+}

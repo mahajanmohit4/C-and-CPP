@@ -1,0 +1,66 @@
+#include <iostream>
+
+using namespace std;
+
+
+class student
+{
+ int roll,id,marks;
+public:
+
+    student()
+    {
+        cout<<"Enter the roll : ";
+        cin>>roll;
+        cout<<"Enter the id : ";
+        cin>>id;
+        cout<<"Enter the marks : ";
+        cin>>marks;
+
+    }
+    student(int i)
+    {
+       roll=id=marks=i;
+    }
+    student(int q,int j,int k)
+    {
+        roll=q;
+        id=j;
+        marks=k;
+
+    }
+
+    student(student &p)
+    {
+        roll=p.roll;
+        id=p.id;
+        marks=p.marks;
+    }
+
+    void show()
+    {
+        cout<<"Roll : ";
+
+        cout<<roll<<endl;
+        cout<<"Id : "<<id<<endl;
+        cout<<"Marks : "<<marks<<endl;
+
+    }
+
+};
+int main()
+{
+    student s1;
+    s1.show();
+    student s2(5);
+    s2.show();
+    student s3(10);
+
+
+    student s4(s3);
+    s4.show();
+    s3.show();
+
+
+    return 0;
+}
